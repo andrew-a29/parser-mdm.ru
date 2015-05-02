@@ -7,6 +7,7 @@
 
 namespace app\assets;
 
+use Yii;
 use yii\web\AssetBundle;
 
 /**
@@ -23,7 +24,10 @@ class AppAsset extends AssetBundle
     public $js = [
     ];
     public $depends = [
+        'app\assets\Html5ShivAsset',
+        'app\assets\RespondAsset',
         'yii\web\YiiAsset',
         'yii\bootstrap\BootstrapAsset',
     ];
+
 }

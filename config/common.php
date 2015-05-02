@@ -7,6 +7,8 @@ $params = ArrayHelper::merge(
 );
 
 return [
+    'name' => 'ParserMDM',
+    'language' => 'ru',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
     'modules' => [
@@ -45,6 +47,16 @@ return [
         ],
         'log' => [
             'class' => 'yii\log\Dispatcher',
+        ],
+        'i18n' => [
+            'translations' => [
+                'app*' => [
+                    'class' => 'yii\i18n\PhpMessageSource',
+                    'fileMap' => [
+                        'app' => 'app.php',
+                    ],
+                ],
+            ],
         ],
     ],
     'params' => $params,
